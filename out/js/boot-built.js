@@ -1351,6 +1351,11 @@ define('voxel/Util3',['require','three'],function(require) {
     }
     return console.log("matrix:", s);
   };
+  Util3.round = function(n, v) {
+    n = n / v;
+    n = Math.round(n) * v;
+    return n;
+  };
   return Util3;
 });
 
@@ -21075,7 +21080,7 @@ define('demo/Model',['require','jquery','three','voxel/Util3','voxel/objects/Bas
       this.rotRect2.rotation.y = Util3.DEG * 90;
       this.rotChildBox.add(this.rotRect2);
       this.sceneBitmap = new THREE.Scene();
-      pos = new THREE.Vector3(Math.floor(Shared.VOXELS_MAX_X * .5), Math.floor(Shared.VOXELS_MAX_Y * .5), Math.floor(Shared.VOXELS_MAX_Z * .5));
+      pos = new THREE.Vector3(Math.floor(Shared.VOXELS_MAX_X * .5) + 0.1, Math.floor(Shared.VOXELS_MAX_Y * .5) + 0.1, Math.floor(Shared.VOXELS_MAX_Z * .5) + 0.1);
       this.bitmap = new TransBitmap(pos);
       this.sceneBitmap.add(this.bitmap);
       this.bitmap.autoAdvanceImage = false;
@@ -21200,18 +21205,17 @@ define('demo/Controller',['require','jquery','three','voxel/Util3','demo/Shared'
           radius = 1 + mult * 12;
           _model.pulsingSphere.setRadius(radius);
           x = _model.pulsingSphere.position.x + 0.3;
-          if (x > Shared.VOXELS_MAX_X + _model.pulsingSphere.getRadius()) {
-            x = _model.pulsingSphere.getRadius() * -1;
+          if (x > Shared.VOXELS_MAX_X + 13) {
+            x = -13;
           }
           _model.pulsingSphere.position.x = x;
           break;
         case _model.sceneBitmap:
-          _model.bitmap.scaleX = _model.bitmap.scaleY = _model.bitmap.scaleZ = 3;
           _model.bitmap.tick();
-          if (_bitmapCount % 60 < 18) {
+          if ((_bitmapCount % 60) < 18) {
             _model.bitmap.rotation.z -= Util3.DEG * 5;
           }
-          if (_bitmapCount % 180 >= 18 && _count % 180 < 18 + 18) {
+          if ((_bitmapCount % 180) >= 18 && (_bitmapCount % 180) < (18 + 18)) {
             _model.bitmap.rotation.x -= Util3.DEG * 5;
           }
           _bitmapCount++;

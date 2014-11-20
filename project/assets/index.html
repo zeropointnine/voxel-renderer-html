@@ -12,13 +12,13 @@
 	<link type="text/css" rel="stylesheet" href="css/site.css">
 
 	<script type="text/javascript">
-		var runRawCode = (window.location.hostname == 'localhost');
-		if (runRawCode) {
-			console.log('* UNCONCATENATED');
+		var useRaw = (window.location.hostname == 'localhost');
+		if (useRaw) {
+			console.log('* UNCONCATENATED *');
 			document.write('\x3Cscript type="text/javascript" src="js/lib/require-2.1.15.min.js" data-main="js/boot.js">\x3C/script>');
 		}
 		else {
-			console.log('* CONCATENATED');
+			console.log('* CONCATENATED *');
 			document.write('\x3Cscript type="text/javascript" src="js/boot-built.js">\x3C/script>');
 		}
 	</script>

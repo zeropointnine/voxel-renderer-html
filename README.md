@@ -2,7 +2,7 @@
 
 A voxel renderer library for HTML5, written in CoffeeScript with AMD modules.  
 
-Can render in 3D using three.js, or in a pixel-art-style isometric view using pixi.js.
+Renders to 3D using three.js, or to 2D isometric view using pixi.js.
 
 Scenes are composed using the already-familiar three.js API. See `/demo` source to get started.   
 

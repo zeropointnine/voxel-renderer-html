@@ -109,7 +109,7 @@ define (require) ->
 
 			@sceneBitmap = new THREE.Scene()
 
-			pos = new THREE.Vector3(Math.floor(Shared.VOXELS_MAX_X * .5), Math.floor(Shared.VOXELS_MAX_Y * .5), Math.floor(Shared.VOXELS_MAX_Z * .5))
+			pos = new THREE.Vector3(Math.floor(Shared.VOXELS_MAX_X * .5) + 0.1, Math.floor(Shared.VOXELS_MAX_Y * .5) + 0.1, Math.floor(Shared.VOXELS_MAX_Z * .5) + 0.1)
 			@bitmap = new TransBitmap pos
 			@sceneBitmap.add @bitmap
 			@bitmap.autoAdvanceImage = no

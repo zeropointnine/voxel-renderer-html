@@ -98,18 +98,17 @@ define(function(require) {
           radius = 1 + mult * 12;
           _model.pulsingSphere.setRadius(radius);
           x = _model.pulsingSphere.position.x + 0.3;
-          if (x > Shared.VOXELS_MAX_X + _model.pulsingSphere.getRadius()) {
-            x = _model.pulsingSphere.getRadius() * -1;
+          if (x > Shared.VOXELS_MAX_X + 13) {
+            x = -13;
           }
           _model.pulsingSphere.position.x = x;
           break;
         case _model.sceneBitmap:
-          _model.bitmap.scaleX = _model.bitmap.scaleY = _model.bitmap.scaleZ = 3;
           _model.bitmap.tick();
-          if (_bitmapCount % 60 < 18) {
+          if ((_bitmapCount % 60) < 18) {
             _model.bitmap.rotation.z -= Util3.DEG * 5;
           }
-          if (_bitmapCount % 180 >= 18 && _count % 180 < 18 + 18) {
+          if ((_bitmapCount % 180) >= 18 && (_bitmapCount % 180) < (18 + 18)) {
             _model.bitmap.rotation.x -= Util3.DEG * 5;
           }
           _bitmapCount++;

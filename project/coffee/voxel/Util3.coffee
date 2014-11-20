@@ -75,4 +75,12 @@ define (require) ->
 			h++
 		console.log "matrix:", s
 
+
+	Util3.round = (n, v) ->
+
+		n = n / v
+		n = Math.round(n) * v
+		return n
+
+
 	return Util3
