@@ -1,0 +1,80 @@
+html {
+	font-size: 14px;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
+
+body {
+	background-color:black;
+	color:#808080;
+}
+
+canvas {
+	display: none;  /* shown programmatically */
+}
+
+.debug {
+	position:absolute;
+	top:15px;
+	right:15px;
+	width:150px;
+	height:20px;
+	text-align: right;
+	font-family: sans-serif;
+	font-size: 10px;
+	opacity:0.66;
+}
+
+.ui {
+	display:none;
+	position:absolute;
+	top:15px;
+	left:0px;
+}
+
+.ui .label {
+	display:inline-block;
+	min-width:130px;
+	padding-right:5px;
+	text-align:right;
+	opacity:0.66;
+}
+
+.ui .ui-scene {
+	margin-top:12px;
+}
+
+.ui a:link {
+	margin-right:5px;
+	margin-left:5px;
+	color:#808080;
+}
+
+.ui .selected {
+	font-size:1.25rem;
+	font-weight: bold;
+	pointer-events: none;
+	text-decoration: none;
+}
+
+.pause-prompt {
+	position:absolute;
+	left:15px;
+	bottom:15px;
+	font-size:12px;
+	opacity:0.5;
+}
+
+.nowebgl {
+	display:none;
+	position:absolute;
+	top:80px;
+	left:80px;
+	color:#880000;
+}

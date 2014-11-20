@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+
+	<meta charset="UTF-8">
+
+	<title></title>
+
+	<link type="text/css" rel="stylesheet" href="css/reset.css">
+	<link type="text/css" rel="stylesheet" href="css/site.css">
+
+	<script type="text/javascript">
+		var runRawCode = false;  // (window.location.hostname == 'localhost');
+		if (runRawCode) {
+			console.log('* UNCONCATENATED');
+			document.write('\x3Cscript type="text/javascript" src="js/lib/require-2.1.15.min.js" data-main="js/boot.js">\x3C/script>');
+		}
+		else {
+			console.log('* CONCATENATED');
+			document.write('\x3Cscript type="text/javascript" src="js/boot-built.js">\x3C/script>');
+		}
+	</script>
+
+</head>
+
+<body>
+
+	<canvas id="canvas3d"></canvas>
+	<canvas id="canvasIso"></canvas>
+
+	<!--
+	<div id="debug" class="debug"></div>
+	-->
+
+	<div id="ui" class="ui">
+		<div class="ui-renderer">
+			<span class="label">select renderer [R] </span> <a id="threeD" href="javascript:void(0)">three dimensional</a> • <a id="isometric" href="javascript:void(0)">isometric</a><br>
+		</div>
+		<div class="ui-scene">
+			<span class="label">select scene [S] </span> <a id="sceneSphere" href="javascript:void(0)">sphere</a> • <a id="sceneRot" href="javascript:void(0)">rotations</a> • <a id="sceneBitmap" href="javascript:void(0)">bitmap</a>
+		</div>
+	</div>
+
+	<div class="pause-prompt">[SPACE] to pause</div>
+
+	<div id="nowebgl" class="nowebgl"></div>
+
+</body>
+
+</html>
