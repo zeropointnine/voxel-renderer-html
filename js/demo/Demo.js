@@ -48,7 +48,7 @@ define(function(require) {
         if (allow) {
           alert('WebGL is not supported in this browser. Falling back to canvas renderer...');
         } else {
-          $('#nowebgl').html('WebGL not supported in this browser.<br>Use of canvas renderer as a fallback is possible, but... let\'s not :/');
+          $('#nowebgl').html('WebGL not supported in this browser.<br>Use of canvas renderer as a fallback is possible, but really, let\'s not :/');
           $('#nowebgl').show();
         }
         return;

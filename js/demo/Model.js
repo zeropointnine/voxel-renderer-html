@@ -78,7 +78,7 @@ define(function(require) {
       this.rotRect2.rotation.y = Util3.DEG * 90;
       this.rotChildBox.add(this.rotRect2);
       this.sceneBitmap = new THREE.Scene();
-      pos = new THREE.Vector3(Math.floor(Shared.VOXELS_MAX_X * .5), Math.floor(Shared.VOXELS_MAX_Y * .5), Math.floor(Shared.VOXELS_MAX_Z * .5));
+      pos = new THREE.Vector3(Math.floor(Shared.VOXELS_MAX_X * .5) + 0.1, Math.floor(Shared.VOXELS_MAX_Y * .5) + 0.1, Math.floor(Shared.VOXELS_MAX_Z * .5) + 0.1);
       this.bitmap = new TransBitmap(pos);
       this.sceneBitmap.add(this.bitmap);
       this.bitmap.autoAdvanceImage = false;
