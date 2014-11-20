@@ -13,7 +13,7 @@ Work in progress. API and implementation may change. If using this library as th
 
 ## Demo  
 
-[View demo](http://www.google.com) 
+[View demo](https://zeropointnine.github.io/voxel-renderer-html/) 
 
 ![screenshot 1](other/screenshot-half.png)
   
